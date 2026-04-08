@@ -3,281 +3,1043 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy & Terms - FitTool</title>
+<title>Privacy Policy & Terms - FitTool Pro</title>
 <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-    h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-    h2 { color: #34495e; margin-top: 30px; }
-    .language-section { margin-bottom: 80px; }
-    .separator { border: 0; height: 1px; background: #ddd; margin: 60px 0; }
-    .footer { margin-top: 50px; font-size: 0.85em; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
-    ul { padding-left: 20px; }
-    strong { color: #2c3e50; }
-    .tos-section { margin-top: 40px; padding-top: 20px; border-top: 1px dashed #eee; }
+:root {
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --secondary: #2ecc71;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+    --dark: #2c3e50;
+    --gray: #7f8c8d;
+    --light-gray: #ecf0f1;
+    --bg: #ffffff;
+    --text: #333333;
+    --border: #dfe6e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px 10px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--bg);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+.content {
+    padding: 40px 30px;
+}
+
+.language-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 15px;
+}
+
+.language-nav a {
+    padding: 10px 20px;
+    background: white;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+    font-size: 0.95em;
+}
+
+.language-nav a:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.language-section {
+    margin-bottom: 80px;
+    scroll-margin-top: 20px;
+}
+
+h1 {
+    color: var(--dark);
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid var(--primary);
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--dark);
+    font-size: 1.6em;
+    margin: 35px 0 20px;
+    padding-left: 15px;
+    border-left: 5px solid var(--secondary);
+    font-weight: 600;
+}
+
+h3 {
+    color: var(--primary-dark);
+    font-size: 1.3em;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+ul {
+    margin: 15px 0 20px 25px;
+    line-height: 1.9;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+strong {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px 25px;
+    border-left: 5px solid var(--primary);
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
+}
+
+.important {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-left: 5px solid var(--warning);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.1);
+}
+
+.danger-box {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-left: 5px solid var(--danger);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.1);
+}
+
+.success-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 5px solid var(--secondary);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.1);
+}
+
+.tos-section {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 3px dashed var(--border);
+}
+
+.separator {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--secondary), var(--danger));
+    margin: 60px 0;
+    border-radius: 3px;
+}
+
+.footer {
+    background: var(--dark);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.footer a {
+    color: var(--secondary);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .content {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    .language-nav {
+        padding: 15px;
+    }
+    
+    .language-nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 30px 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.5em;
+    }
+    
+    .content {
+        padding: 25px 15px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    .language-nav a {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
+}
+
+.language-section {
+    display: none;
+    margin-bottom: 40px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.language-section.active { display: block; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.language-nav a.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+.short-version {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary);
+    margin-top: 20px;
+}
+.short-version h2 { margin-top: 0; }
+.short-version p { font-size: 1.1em; }
+.english-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.english-link:hover {
+    background: var(--primary-dark);
+    color: white;
+}
 </style>
 </head>
 <body>
 
-<!-- ENGLISH -->
-<div class="language-section">
+<div class="container">
+    
+<div class="header">
+    <h1>🏋️ FitTool</h1>
+    <p>Privacy Policy & Terms of Service</p>
+    <p style="font-size: 0.9em; margin-top: 10px;">
+        <span class="badge">GDPR</span>
+        <span class="badge">COPPA</span>
+        <span class="badge">CCPA</span>
+        <span class="badge">Google Play</span>
+    </p>
+</div>
+
+<div class="content">
+
+<!-- LANGUAGE NAVIGATION -->
+<div class="language-nav">
+    <a href="#english">🇬🇧 English</a>
+    <a href="#italiano">🇮🇹 Italiano</a>
+    <a href="#espanol">🇪🇸 Español</a>
+    <a href="#deutsch">🇩🇪 Deutsch</a>
+    <a href="#francais">🇫🇷 Français</a>
+    <a href="#japanese">🇯🇵 日本語</a>
+    <a href="#chinese">🇨🇳 中文</a>
+</div>
+
+<!-- ==================== ENGLISH ==================== -->
+<div class="language-section" id="english">
 <h1>Privacy Policy (English)</h1>
-<p><em>Last Updated: April 7, 2026</em></p>
-<p>Your privacy is very important to us. This policy explains how <strong>FitTool</strong> collects, uses, and protects your personal data, fully compliant with Google Play Store policies.</p>
+<p><em>Last Updated: April 8, 2026</em></p>
 
-<h2>1. Data Collection and Sharing</h2>
-<p>FitTool collects information you provide (Name, Weight, Height, Age) to calculate fitness metrics (BMI, TDEE). 
-<strong>Sharing:</strong> Users can generate PDF reports and send them via their chosen email client; data is transmitted externally only in this case.</p>
-
-<h2>2. Data Storage and Security</h2>
+<p>Your privacy is very important to us. This Privacy Policy explains how <strong>FitTool</strong> ("we", "our", "the App") collects, uses, stores, and protects your personal information in full compliance with:</p>
 <ul>
-<li><strong>Local Storage:</strong> All fitness data is stored locally on your device. No personal data is uploaded to our servers.</li>
-<li><strong>Data Deletion:</strong> Users can remove records in-app or uninstall the app to delete their data.</li>
+<li>✅ General Data Protection Regulation (GDPR) - European Union</li>
+<li>✅ California Consumer Privacy Act (CCPA) - USA</li>
+<li>✅ Children's Online Privacy Protection Act (COPPA) - USA</li>
+<li>✅ Google Play Developer Program Policies</li>
+<li>✅ Apple App Store Guidelines (if applicable)</li>
 </ul>
 
-<h2>3. Advertising and Device Identifiers</h2>
-<p>FitTool uses <strong>Google AdMob</strong>. AdMob collects the Android Advertising ID and diagnostic data for ad personalization and performance analytics, according to <a href="https://policies.google.com/privacy" target="_blank">Google Policies</a>.</p>
+<div class="danger-box">
+<strong>⚠️ CRITICAL MEDICAL DISCLAIMER</strong><br><br>
+FitTool provides fitness calculations (BMI, TDEE, body composition, macronutrient distribution) for <strong>informational and educational purposes ONLY</strong>. These are estimates and should <strong>NOT replace professional medical advice, diagnosis, or treatment</strong>. Always consult a qualified healthcare provider before starting any diet, exercise, or fitness program. This app is NOT a medical device.
+</div>
 
-<h2>4. Minors (13+)</h2>
-<p>The app is intended for users aged 13 and above. We do not knowingly collect data from children under 13. For minors aged 13–17, all data remains under local user control.</p>
+<h2>📋 1. Developer Information</h2>
+<div class="highlight-box">
+<strong>Developer:</strong> fraian84 (Individual Developer)<br>
+<strong>Location:</strong> Italy<br>
+<strong>Contact Email:</strong> <a href="mailto:fraian_dev@protonmail.com">fraian_dev@protonmail.com</a><br>
+<strong>App Availability:</strong> Worldwide via Google Play Store (and Apple App Store if applicable)
+</div>
 
-<h2>5. Contact</h2>
-<p>Questions? Contact us at the email listed on the Google Play Store page.</p>
+<h2>📊 2. Data We Collect</h2>
+<p>FitTool collects <strong>only the information you voluntarily provide</strong> to calculate fitness metrics:</p>
+<ul>
+<li><strong>Personal Information:</strong> Name (optional - can be any text including nicknames or pseudonyms like "Pippo")</li>
+<li><strong>Physical Metrics:</strong> Weight, height, age, body measurements</li>
+<li><strong>Calculated Data:</strong> BMI, TDEE, body composition estimates, macronutrient distribution</li>
+<li><strong>Progress History:</strong> Historical records of measurements and calculations you choose to save</li>
+</ul>
 
+<div class="success-box">
+<strong>📱 100% LOCAL STORAGE</strong><br><br>
+All data you enter is stored <strong>exclusively on your device</strong>. We do NOT collect, transmit, or store your personal fitness data on any external servers or cloud services. You have complete control over your data.
+</div>
+
+<h2>🎯 3. How We Use Your Data</h2>
+<p>Your data is used solely for:</p>
+<ul>
+<li>✓ Performing fitness calculations (BMI, TDEE, body composition, macronutrients)</li>
+<li>✓ Displaying your progress history and trends</li>
+<li>✓ Generating PDF reports for your personal use</li>
+<li>✓ Providing app functionality during your 30-day free trial and after premium purchase</li>
+</ul>
+
+<h2>🔄 4. Data Sharing and Third-Party Services</h2>
+
+<h3>4.1 User-Initiated Sharing</h3>
+<p>FitTool allows you to generate PDF reports and share them using your device's native sharing capabilities (email, WhatsApp, Instagram, etc.). When you choose to share:</p>
+<ul>
+<li>Data is transmitted <strong>only through your selected third-party app</strong></li>
+<li>We do NOT control or access this data once shared</li>
+<li>Shared data is subject to the privacy policies of the third-party service you use</li>
+</ul>
+
+<h3>4.2 Advertising (Google AdMob)</h3>
+<p>FitTool displays advertisements using <strong>Google AdMob</strong>. AdMob may collect:</p>
+<ul>
+<li><strong>Android Advertising ID (AAID)</strong> - a resettable identifier for advertising purposes</li>
+<li><strong>Device information:</strong> Device model, OS version, screen resolution</li>
+<li><strong>Diagnostic data:</strong> App performance metrics, crash reports</li>
+<li><strong>Ad interaction data:</strong> Ad views, clicks, and engagement</li>
+</ul>
+
+<div class="highlight-box">
+<strong>🎛️ Control Your Ads</strong><br><br>
+You can opt-out of personalized ads in your device settings:<br>
+<strong>Settings > Google > Ads > Opt out of Ads Personalization</strong><br><br>
+AdMob operates according to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+</div>
+
+<h3>4.3 Google Play Services</h3>
+<p>We use Google Play Console for automatic crash reporting and diagnostic analytics to improve app stability. Google may collect:</p>
+<ul>
+<li>Crash logs and stack traces (no personal fitness data included)</li>
+<li>Device and OS information</li>
+<li>App version and usage statistics</li>
+</ul>
+
+<h2>💰 5. In-App Purchases (IAP)</h2>
+<p>FitTool offers a <strong>one-time premium purchase of €4.99</strong> (price may vary by region):</p>
+
+<div class="highlight-box">
+<strong>🎁 30-Day Free Trial:</strong> Full access to all features with ads<br><br>
+<strong>⏰ After Trial (if not purchased):</strong><br>
+- PDF Reports - 🔒 LOCKED<br>
+- Progress Diary - 🔒 LOCKED<br>
+- Body Composition Analysis - 🔒 LOCKED<br><br>
+<strong>🌟 Premium Unlock (€4.99):</strong><br>
+- ✅ Permanent access to ALL features<br>
+- ✅ Complete ad removal<br>
+- ✅ Lifetime updates
+</div>
+
+<div class="important">
+<strong>💳 Payment Processing:</strong><br>
+All purchases are processed securely through <strong>Google Play Billing</strong>. We do NOT collect or store your payment information (credit card, billing address, etc.). Refunds are subject to Google Play's refund policy.
+</div>
+
+<h2>🧒 6. Children's Privacy (Ages 3+)</h2>
+<p>FitTool is rated <strong>3+ (PEGI 3 / Everyone)</strong> and complies with COPPA requirements:</p>
+
+<div class="important">
+<strong>👨‍👩‍👧 PARENTAL GUIDANCE FOR CHILDREN UNDER 13</strong><br><br>
+<ul>
+<li>✓ We do NOT knowingly collect personal information from children under 13 without verifiable parental consent</li>
+<li>✓ All data remains on the device under the child's/parent's control</li>
+<li>✓ Parents can delete all data by uninstalling the app</li>
+<li>✓ For children ages 3-12, parental supervision is recommended when using fitness calculations</li>
+<li>⚠️ BMI and TDEE calculations may not be appropriate for young children - consult a pediatrician</li>
+</ul>
+</div>
+
+<p><strong>For users aged 13-17:</strong> All data remains stored locally on your device. You have full control to view, modify, or delete your information at any time.</p>
+
+<h2>🔒 7. Data Security</h2>
+<p>We take data security seriously:</p>
+<ul>
+<li><strong>🏠 Local storage:</strong> Data is stored using Android's secure app-specific storage</li>
+<li><strong>🚫 No external transmission:</strong> Your fitness data never leaves your device (except when you manually share reports)</li>
+<li><strong>🔐 Zero permissions:</strong> FitTool requires <strong>ZERO special permissions</strong> (no camera, location, contacts, storage access, etc.)</li>
+<li><strong>🛡️ Encryption:</strong> Data at rest is protected by your device's built-in encryption (if enabled)</li>
+</ul>
+
+<h2>⚖️ 8. Your Rights (GDPR & CCPA)</h2>
+<p>You have the following rights regarding your data:</p>
+<ul>
+<li><strong>Right to Access:</strong> View all your stored data within the app</li>
+<li><strong>Right to Rectification:</strong> Edit or correct any information</li>
+<li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Delete individual records or uninstall the app</li>
+<li><strong>Right to Data Portability:</strong> Export your data via PDF reports</li>
+<li><strong>Right to Object:</strong> Opt-out of personalized ads via device settings</li>
+<li><strong>Right to Restrict Processing:</strong> You control when and how your data is used</li>
+</ul>
+
+<h2>⏱️ 9. Data Retention</h2>
+<ul>
+<li><strong>User data:</strong> Stored on your device indefinitely until you delete it</li>
+<li><strong>AdMob data:</strong> Retained according to Google's policies (typically 2 months for ad personalization)</li>
+<li><strong>Crash reports:</strong> Retained by Google Play Console for up to 90 days</li>
+</ul>
+
+<h2>🌍 10. International Data Transfers</h2>
+<p>Since all fitness data is stored locally on your device, there are <strong>NO international data transfers</strong> of your personal information. AdMob data may be transferred to Google servers globally as per Google's Privacy Policy.</p>
+
+<h2>📝 11. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy periodically. Changes will be effective immediately upon posting. The "Last Updated" date at the top indicates the most recent revision. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+<h2>📧 12. Contact Us</h2>
+<div class="highlight-box">
+<strong>Questions, concerns, or data requests?</strong><br><br>
+<strong>Email:</strong> <a href="mailto:fraian_dev@protonmail.com">fraian_dev@protonmail.com</a><br>
+<strong>Response Time:</strong> We aim to respond within 7 business days
+</div>
+
+<!-- TERMS OF SERVICE -->
 <div class="tos-section">
 <h1>Terms of Service (English)</h1>
-<p>By using FitTool, you agree to these Terms.</p>
-<h2>1. Disclaimer</h2>
-<p>FitTool provides fitness calculations for informational purposes only. It is not a substitute for professional medical advice.</p>
-<h2>2. Limitation of Liability</h2>
-<p>The developer is not liable for any health issues or damages from using this app. Always consult a physician before starting any new fitness program.</p>
+<p><em>Last Updated: April 8, 2026</em></p>
+
+<p>By downloading, installing, or using <strong>FitTool</strong>, you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the app.</p>
+
+<h2>✅ 1. Acceptance of Terms</h2>
+<p>These Terms constitute a legally binding agreement between you and fraian84 (the "Developer"). By using FitTool, you represent that you are:</p>
+<ul>
+<li>At least 3 years old (or have parental/guardian consent if under 13)</li>
+<li>Capable of entering into a binding contract</li>
+<li>Using the app in compliance with all applicable laws</li>
+</ul>
+
+<h2>📜 2. License Grant</h2>
+<p>The Developer grants you a limited, non-exclusive, non-transferable, revocable license to use FitTool for personal, non-commercial purposes, subject to these Terms.</p>
+
+<h2>💎 3. Free Trial and Premium Purchase</h2>
+<ul>
+<li><strong>30-Day Free Trial:</strong> All users receive full access to features (with ads) for 30 days from first use</li>
+<li><strong>After Trial:</strong> PDF reports, progress diary, and body composition features become locked unless premium is purchased</li>
+<li><strong>Premium Purchase:</strong> One-time payment of €4.99 (or equivalent) unlocks all features permanently and removes ads</li>
+<li><strong>No Refunds:</strong> All purchases are final and non-refundable except as required by law or Google Play policy</li>
+<li><strong>Payment Processing:</strong> Handled exclusively by Google Play Billing</li>
+</ul>
+
+<h2>⚕️ 4. Medical Disclaimer and Limitation of Liability</h2>
+
+<div class="danger-box">
+<strong>⚠️ CRITICAL HEALTH DISCLAIMER</strong><br><br>
+<ul>
+<li>🚫 FitTool is NOT a medical device and is NOT intended for medical diagnosis or treatment</li>
+<li>📊 All calculations (BMI, TDEE, body composition, macronutrients) are <strong>estimates only</strong></li>
+<li>⚠️ Results may be inaccurate and should NOT be relied upon for medical decisions</li>
+<li>📉 BMI is a screening tool and does NOT diagnose body fatness or health</li>
+<li>🔢 TDEE calculations are based on general population averages and may not apply to you</li>
+<li>🎯 Body composition estimates are approximations and NOT substitutes for professional assessment</li>
+<li>👨‍⚕️ <strong>ALWAYS consult a qualified healthcare provider</strong> before starting any diet, exercise, or fitness program</li>
+<li>🚨 Do NOT use this app if you have an eating disorder, heart condition, or any medical condition without medical clearance</li>
+<li>🆘 Seek immediate medical attention for any health emergency</li>
+</ul>
 </div>
+
+<p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+<ul>
+<li>The Developer is NOT liable for any health issues, injuries, or damages resulting from use of this app</li>
+<li>The app is provided "AS IS" and "AS AVAILABLE" without warranties of any kind</li>
+<li>The Developer makes NO guarantees regarding accuracy, reliability, or suitability for any purpose</li>
+<li>You assume ALL risks associated with using this app</li>
+</ul>
+
+<h2>🚫 5. Prohibited Uses</h2>
+<p>You agree NOT to:</p>
+<ul>
+<li>Reverse engineer, decompile, or disassemble the app</li>
+<li>Modify, adapt, or create derivative works</li>
+<li>Use the app for commercial purposes without permission</li>
+<li>Circumvent or disable security features or payment mechanisms</li>
+<li>Upload malicious code or viruses</li>
+<li>Violate any applicable laws or regulations</li>
+</ul>
+
+<h2>©️ 6. Intellectual Property</h2>
+<p>All content, features, designs, logos, trademarks, and code in FitTool are the exclusive property of <strong>fraian84</strong> and are protected by copyright, trademark, and other intellectual property laws. You may not use any intellectual property without express written permission.</p>
+
+<h2>🔄 7. App Modifications and Updates</h2>
+<p>The Developer reserves the right to:</p>
+<ul>
+<li>Modify, suspend, or discontinue any feature at any time without notice</li>
+<li>Update the app to add features, fix bugs, or improve performance</li>
+<li>Change pricing for future purchases (existing purchases are honored)</li>
+<li>Update these Terms (effective upon posting)</li>
+</ul>
+
+<h2>🔚 8. Termination</h2>
+<p>The Developer may terminate or suspend your access to FitTool at any time, with or without cause, with or without notice. Upon termination, you must cease all use and may delete the app.</p>
+
+<h2>⚖️ 9. Governing Law and Jurisdiction</h2>
+<p>These Terms are governed by the laws of <strong>Italy</strong>. Any disputes shall be resolved in the courts of Italy. If you are a consumer in the EU, you may also have rights under local consumer protection laws.</p>
+
+<h2>✂️ 10. Severability</h2>
+<p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+<h2>📄 11. Entire Agreement</h2>
+<p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and the Developer regarding FitTool.</p>
+
+<h2>📧 12. Contact for Legal Matters</h2>
+<p><strong>Email:</strong> <a href="mailto:fraian_dev@protonmail.com">fraian_dev@protonmail.com</a></p>
+</div>
+
 </div>
 
 <hr class="separator">
 
-<!-- ITALIANO -->
-<div class="language-section">
+<!-- ==================== ITALIANO ==================== -->
+<div class="language-section" id="italiano">
 <h1>Informativa sulla Privacy (Italiano)</h1>
-<p><em>Ultimo aggiornamento: 7 Aprile 2026</em></p>
-<p>La tua privacy è molto importante per noi. Questa informativa spiega come <strong>FitTool</strong> raccoglie, utilizza e protegge i tuoi dati personali, in piena conformità con le norme del Google Play Store.</p>
+<p><em>Ultimo aggiornamento: 8 Aprile 2026</em></p>
 
-<h2>1. Raccolta e Condivisione dei Dati</h2>
-<p>FitTool raccoglie informazioni fornite dall'utente (Nome, Peso, Altezza, Età) per calcolare metriche fitness (BMI, TDEE). 
-<strong>Condivisione:</strong> L'app consente di generare report PDF e inviarli tramite il client email scelto; i dati vengono trasmessi esternamente solo in questo caso.</p>
-
-<h2>2. Conservazione e Sicurezza dei Dati</h2>
+<p>La tua privacy è molto importante per noi. Questa Informativa sulla Privacy spiega come <strong>FitTool</strong> ("noi", "nostro", "l'App") raccoglie, utilizza, archivia e protegge le tue informazioni personali in piena conformità con:</p>
 <ul>
-<li><strong>Archiviazione Locale:</strong> Tutti i dati fitness sono memorizzati localmente sul dispositivo. Nessun dato personale viene caricato sui nostri server.</li>
-<li><strong>Eliminazione Dati:</strong> L'utente può rimuovere record dall'app o disinstallarla per cancellare i propri dati.</li>
+<li>✅ Regolamento Generale sulla Protezione dei Dati (GDPR) - Unione Europea</li>
+<li>✅ California Consumer Privacy Act (CCPA) - USA</li>
+<li>✅ Children's Online Privacy Protection Act (COPPA) - USA</li>
+<li>✅ Norme del Programma per Sviluppatori di Google Play</li>
+<li>✅ Linee Guida dell'Apple App Store (se applicabile)</li>
 </ul>
 
-<h2>3. Pubblicità e Identificativi Dispositivo</h2>
-<p>FitTool utilizza <strong>Google AdMob</strong>. AdMob raccoglie l'ID pubblicitario Android e dati diagnostici per personalizzazione annunci e analisi delle prestazioni, secondo le <a href="https://policies.google.com/privacy" target="_blank">Norme Google</a>.</p>
+<div class="danger-box">
+<strong>⚠️ DISCLAIMER MEDICO CRITICO</strong><br><br>
+FitTool fornisce calcoli fitness (BMI, TDEE, composizione corporea, ripartizione macronutrienti) <strong>esclusivamente a scopo informativo ed educativo</strong>. Si tratta di stime che <strong>NON devono sostituire consulenza, diagnosi o trattamento medico professionale</strong>. Consulta sempre un operatore sanitario qualificato prima di iniziare qualsiasi programma di dieta, esercizio o fitness. Questa app NON è un dispositivo medico.
+</div>
 
-<h2>4. Minori (13+)</h2>
-<p>L'app è destinata a utenti di età pari o superiore a 13 anni. Non raccogliamo consapevolmente dati di bambini sotto i 13 anni. Per i minori 13–17 anni, i dati restano sotto il controllo locale dell'utente.</p>
+<h2>📋 1. Informazioni sullo Sviluppatore</h2>
+<div class="highlight-box">
+<strong>Sviluppatore:</strong> fraian84 (Sviluppatore Individuale)<br>
+<strong>Sede:</strong> Italia<br>
+<strong>Email di Contatto:</strong> <a href="mailto:fraian_dev@protonmail.com">fraian_dev@protonmail.com</a><br>
+<strong>Disponibilità App:</strong> Mondiale tramite Google Play Store (e Apple App Store se applicabile)
+</div>
 
-<h2>5. Contatti</h2>
-<p>Per domande, contattaci tramite l'email presente nella scheda Google Play.</p>
+<h2>📊 2. Dati che Raccogliamo</h2>
+<p>FitTool raccoglie <strong>solo le informazioni che fornisci volontariamente</strong> per calcolare metriche fitness:</p>
+<ul>
+<li><strong>Informazioni Personali:</strong> Nome (facoltativo - può essere qualsiasi testo inclusi soprannomi o pseudonimi come "Pippo")</li>
+<li><strong>Metriche Fisiche:</strong> Peso, altezza, età, misure corporee</li>
+<li><strong>Dati Calcolati:</strong> BMI, TDEE, stime composizione corporea, ripartizione macronutrienti</li>
+<li><strong>Storico Progressi:</strong> Cronologia delle misurazioni e dei calcoli che scegli di salvare</li>
+</ul>
 
+<div class="success-box">
+<strong>📱 ARCHIVIAZIONE 100% LOCALE</strong><br><br>
+Tutti i dati che inserisci sono memorizzati <strong>esclusivamente sul tuo dispositivo</strong>. NON raccogliamo, trasmettiamo o archiviamo i tuoi dati fitness personali su server esterni o servizi cloud. Hai il controllo completo sui tuoi dati.
+</div>
+
+<h2>🎯 3. Come Utilizziamo i Tuoi Dati</h2>
+<p>I tuoi dati sono utilizzati esclusivamente per:</p>
+<ul>
+<li>✓ Eseguire calcoli fitness (BMI, TDEE, composizione corporea, macronutrienti)</li>
+<li>✓ Visualizzare la tua cronologia progressi e tendenze</li>
+<li>✓ Generare report PDF per uso personale</li>
+<li>✓ Fornire funzionalità app durante la prova gratuita di 30 giorni e dopo l'acquisto premium</li>
+</ul>
+
+<h2>🔄 4. Condivisione Dati e Servizi di Terze Parti</h2>
+
+<h3>4.1 Condivisione Avviata dall'Utente</h3>
+<p>FitTool ti permette di generare report PDF e condividerli usando le capacità di condivisione native del dispositivo (email, WhatsApp, Instagram, ecc.). Quando scegli di condividere:</p>
+<ul>
+<li>I dati sono trasmessi <strong>solo tramite l'app di terze parti selezionata</strong></li>
+<li>NON controlliamo né accediamo a questi dati una volta condivisi</li>
+<li>I dati condivisi sono soggetti alle policy privacy del servizio di terze parti che utilizzi</li>
+</ul>
+
+<h3>4.2 Pubblicità (Google AdMob)</h3>
+<p>FitTool mostra annunci pubblicitari tramite <strong>Google AdMob</strong>. AdMob può raccogliere:</p>
+<ul>
+<li><strong>ID Pubblicitario Android (AAID)</strong> - identificatore resettabile per scopi pubblicitari</li>
+<li><strong>Informazioni dispositivo:</strong> Modello dispositivo, versione OS, risoluzione schermo</li>
+<li><strong>Dati diagnostici:</strong> Metriche prestazioni app, report crash</li>
+<li><strong>Dati interazione annunci:</strong> Visualizzazioni, clic e coinvolgimento con gli annunci</li>
+</ul>
+
+<div class="highlight-box">
+<strong>🎛️ Controlla i Tuoi Annunci</strong><br><br>
+Puoi disattivare gli annunci personalizzati nelle impostazioni dispositivo:<br>
+<strong>Impostazioni > Google > Annunci > Disattiva personalizzazione annunci</strong><br><br>
+AdMob opera secondo la <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.
+</div>
+
+<h3>4.3 Servizi Google Play</h3>
+<p>Utilizziamo Google Play Console per segnalazione automatica crash e analisi diagnostiche per migliorare stabilità dell'app. Google può raccogliere:</p>
+<ul>
+<li>Log crash e stack trace (nessun dato fitness personale incluso)</li>
+<li>Informazioni dispositivo e OS</li>
+<li>Versione app e statistiche utilizzo</li>
+</ul>
+
+<h2>💰 5. Acquisti In-App (IAP)</h2>
+<p>FitTool offre un <strong>acquisto premium una tantum di €4,99</strong> (il prezzo può variare per regione):</p>
+
+<div class="highlight-box">
+<strong>🎁 Prova Gratuita 30 Giorni:</strong> Accesso completo a tutte le funzionalità con annunci<br><br>
+<strong>⏰ Dopo la Prova (se non acquistato):</strong><br>
+- Report PDF - 🔒 BLOCCATI<br>
+- Diario Progressi - 🔒 BLOCCATO<br>
+- Analisi Composizione Corporea - 🔒 BLOCCATA<br><br>
+<strong>🌟 Sblocco Premium (€4,99):</strong><br>
+- ✅ Accesso permanente a TUTTE le funzionalità<br>
+- ✅ Rimozione completa annunci<br>
+- ✅ Aggiornamenti a vita
+</div>
+
+<div class="important">
+<strong>💳 Elaborazione Pagamenti:</strong><br>
+Tutti gli acquisti sono elaborati in modo sicuro tramite <strong>Google Play Billing</strong>. NON raccogliamo né memorizziamo le tue informazioni di pagamento (carta di credito, indirizzo fatturazione, ecc.). I rimborsi sono soggetti alla policy rimborsi di Google Play.
+</div>
+
+<h2>🧒 6. Privacy dei Minori (Età 3+)</h2>
+<p>FitTool è classificato <strong>3+ (PEGI 3 / Per Tutti)</strong> e conforme ai requisiti COPPA:</p>
+
+<div class="important">
+<strong>👨‍👩‍👧 GUIDA GENITORIALE PER BAMBINI SOTTO I 13 ANNI</strong><br><br>
+<ul>
+<li>✓ NON raccogliamo consapevolmente informazioni personali da bambini sotto i 13 anni senza consenso genitoriale verificabile</li>
+<li>✓ Tutti i dati rimangono sul dispositivo sotto controllo del bambino/genitore</li>
+<li>✓ I genitori possono eliminare tutti i dati disinstallando l'app</li>
+<li>✓ Per bambini 3-12 anni, si raccomanda supervisione genitoriale quando si usano i calcoli fitness</li>
+<li>⚠️ I calcoli BMI e TDEE potrebbero non essere appropriati per bambini piccoli - consulta un pediatra</li>
+</ul>
+</div>
+
+<p><strong>Per utenti 13-17 anni:</strong> Tutti i dati rimangono memorizzati localmente sul tuo dispositivo. Hai controllo completo per visualizzare, modificare o eliminare le tue informazioni in qualsiasi momento.</p>
+
+<h2>🔒 7. Sicurezza dei Dati</h2>
+<p>Prendiamo sul serio la sicurezza dei dati:</p>
+<ul>
+<li><strong>🏠 Archiviazione locale:</strong> I dati sono memorizzati usando lo storage sicuro specifico dell'app di Android</li>
+<li><strong>🚫 Nessuna trasmissione esterna:</strong> I tuoi dati fitness non lasciano mai il tuo dispositivo (tranne quando condividi manualmente i report)</li>
+<li><strong>🔐 Zero permessi:</strong> FitTool richiede <strong>ZERO permessi speciali</strong> (nessuna fotocamera, posizione, contatti, accesso storage, ecc.)</li>
+<li><strong>🛡️ Crittografia:</strong> I dati a riposo sono protetti dalla crittografia integrata del dispositivo (se abilitata)</li>
+</ul>
+
+<h2>⚖️ 8. I Tuoi Diritti (GDPR & CCPA)</h2>
+<p>Hai i seguenti diritti riguardo ai tuoi dati:</p>
+<ul>
+<li><strong>Diritto di Accesso:</strong> Visualizza tutti i tuoi dati memorizzati nell'app</li>
+<li><strong>Diritto di Rettifica:</strong> Modifica o correggi qualsiasi informazione</li>
+<li><strong>Diritto alla Cancellazione ("Diritto all'Oblio"):</strong> Elimina singoli record o disinstalla l'app</li>
+<li><strong>Diritto alla Portabilità dei Dati:</strong> Esporta i tuoi dati tramite report PDF</li>
+<li><strong>Diritto di Opposizione:</strong> Disattiva annunci personalizzati tramite impostazioni dispositivo</li>
+<li><strong>Diritto di Limitazione del Trattamento:</strong> Controlli quando e come vengono utilizzati i tuoi dati</li>
+</ul>
+
+<h2>⏱️ 9. Conservazione Dati</h2>
+<ul>
+<li><strong>Dati utente:</strong> Memorizzati sul tuo dispositivo indefinitamente finché non li elimini</li>
+<li><strong>Dati AdMob:</strong> Conservati secondo le policy di Google (tipicamente 2 mesi per personalizzazione annunci)</li>
+<li><strong>Report crash:</strong> Conservati da Google Play Console fino a 90 giorni</li>
+</ul>
+
+<h2>🌍 10. Trasferimenti Internazionali di Dati</h2>
+<p>Poiché tutti i dati fitness sono memorizzati localmente sul tuo dispositivo, <strong>NON ci sono trasferimenti internazionali</strong> delle tue informazioni personali. I dati AdMob possono essere trasferiti ai server Google globalmente secondo la Privacy Policy di Google.</p>
+
+<h2>📝 11. Modifiche a Questa Informativa Privacy</h2>
+<p>Potremmo aggiornare periodicamente questa Informativa Privacy. Le modifiche saranno effettive immediatamente dopo la pubblicazione. La data "Ultimo aggiornamento" in alto indica la revisione più recente. L'uso continuato dell'app dopo le modifiche costituisce accettazione della policy aggiornata.</p>
+
+<h2>📧 12. Contattaci</h2>
+<div class="highlight-box">
+<strong>Domande, dubbi o richieste sui dati?</strong><br><br>
+<strong>Email:</strong> <a href="mailto:fraian_dev@protonmail.com">fraian_dev@protonmail.com</a><br>
+<strong>Tempo di Risposta:</strong> Puntiamo a rispondere entro 7 giorni lavorativi
+</div>
+
+<!-- TERMINI DI SERVIZIO -->
 <div class="tos-section">
 <h1>Termini di Servizio (Italiano)</h1>
-<p>Usando FitTool, accetti questi Termini.</p>
-<h2>1. Disclaimer</h2>
-<p>FitTool fornisce calcoli fitness solo a scopo informativo. Non sostituisce il parere medico professionale.</p>
-<h2>2. Limitazione di Responsabilità</h2>
-<p>Lo sviluppatore non è responsabile per problemi di salute o danni derivanti dall'uso dell'app. Consulta sempre un medico prima di iniziare un nuovo programma fitness.</p>
+<p><em>Ultimo aggiornamento: 8 Aprile 2026</em></p>
+
+<p>Scaricando, installando o utilizzando <strong>FitTool</strong>, accetti di essere vincolato da questi Termini di Servizio ("Termini"). Se non accetti, non utilizzare l'app.</p>
+
+<h2>✅ 1. Accettazione dei Termini</h2>
+<p>Questi Termini costituiscono un accordo legalmente vincolante tra te e fraian84 (lo "Sviluppatore"). Utilizzando FitTool, dichiari di:</p>
+<ul>
+<li>Avere almeno 3 anni (o avere consenso genitoriale/tutore se sotto i 13 anni)</li>
+<li>Essere capace di stipulare un contratto vincolante</li>
+<li>Utilizzare l'app in conformità con tutte le leggi applicabili</li>
+</ul>
+
+<h2>📜 2. Concessione Licenza</h2>
+<p>Lo Sviluppatore ti concede una licenza limitata, non esclusiva, non trasferibile, revocabile per utilizzare FitTool per scopi personali e non commerciali, soggetta a questi Termini.</p>
+
+<h2>💎 3. Prova Gratuita e Acquisto Premium</h2>
+<ul>
+<li><strong>Prova Gratuita 30 Giorni:</strong> Tutti gli utenti ricevono accesso completo alle funzionalità (con annunci) per 30 giorni dal primo utilizzo</li>
+<li><strong>Dopo la Prova:</strong> Report PDF, diario progressi e funzionalità composizione corporea diventano bloccate a meno che non venga acquistato il premium</li>
+<li><strong>Acquisto Premium:</strong> Pagamento una tantum di €4,99 (o equivalente) sblocca tutte le funzionalità permanentemente e rimuove gli annunci</li>
+<li><strong>Nessun Rimborso:</strong> Tutti gli acquisti sono definitivi e non rimborsabili tranne quando richiesto dalla legge o dalla policy Google Play</li>
+<li><strong>Elaborazione Pagamento:</strong> Gestita esclusivamente da Google Play Billing</li>
+</ul>
+
+<h2>⚕️ 4. Disclaimer Medico e Limitazione di Responsabilità</h2>
+
+<div class="danger-box">
+<strong>⚠️ DISCLAIMER SALUTE CRITICO</strong><br><br>
+<ul>
+<li>🚫 FitTool NON è un dispositivo medico e NON è destinato a diagnosi o trattamento medico</li>
+<li>📊 Tutti i calcoli (BMI, TDEE, composizione corporea, macronutrienti) sono <strong>solo stime</strong></li>
+<li>⚠️ I risultati possono essere inaccurati e NON devono essere utilizzati per decisioni mediche</li>
+<li>📉 Il BMI è uno strumento di screening e NON diagnostica grasso corporeo o salute</li>
+<li>🔢 I calcoli TDEE si basano su medie di popolazione generale e potrebbero non applicarsi a te</li>
+<li>🎯 Le stime composizione corporea sono approssimazioni e NON sostituiscono valutazioni professionali</li>
+<li>👨‍⚕️ <strong>Consulta SEMPRE un operatore sanitario qualificato</strong> prima di iniziare qualsiasi dieta, esercizio o programma fitness</li>
+<li>🚨 NON utilizzare questa app se hai disturbi alimentari, patologie cardiache o condizioni mediche senza autorizzazione medica</li>
+<li>🆘 Cerca assistenza medica immediata per qualsiasi emergenza sanitaria</li>
+</ul>
 </div>
+
+<p><strong>NELLA MASSIMA MISURA CONSENTITA DALLA LEGGE:</strong></p>
+<ul>
+<li>Lo Sviluppatore NON è responsabile per problemi di salute, lesioni o danni derivanti dall'uso di questa app</li>
+<li>L'app è fornita "COSÌ COM'È" e "COME DISPONIBILE" senza garanzie di alcun tipo</li>
+<li>Lo Sviluppatore NON fornisce garanzie riguardo accuratezza, affidabilità o idoneità per qualsiasi scopo</li>
+<li>Ti assumi TUTTI i rischi associati all'uso di questa app</li>
+</ul>
+
+<h2>🚫 5. Usi Proibiti</h2>
+<p>Accetti di NON:</p>
+<ul>
+<li>Fare reverse engineering, decompilare o disassemblare l'app</li>
+<li>Modificare, adattare o creare opere derivate</li>
+<li>Utilizzare l'app per scopi commerciali senza permesso</li>
+<li>Aggirare o disabilitare funzionalità di sicurezza o meccanismi di pagamento</li>
+<li>Caricare codice dannoso o virus</li>
+<li>Violare leggi o regolamenti applicabili</li>
+</ul>
+
+<h2>©️ 6. Proprietà Intellettuale</h2>
+<p>Tutti i contenuti, funzionalità, design, loghi, marchi e codice in FitTool sono proprietà esclusiva di <strong>fraian84</strong> e sono protetti da copyright, marchi e altre leggi sulla proprietà intellettuale. Non puoi utilizzare alcuna proprietà intellettuale senza permesso scritto esplicito.</p>
+
+<h2>🔄 7. Modifiche e Aggiornamenti App</h2>
+<p>Lo Sviluppatore si riserva il diritto di:</p>
+<ul>
+<li>Modificare, sospendere o interrompere qualsiasi funzionalità in qualsiasi momento senza preavviso</li>
+<li>Aggiornare l'app per aggiungere funzionalità, correggere bug o migliorare prestazioni</li>
+<li>Modificare i prezzi per acquisti futuri (gli acquisti esistenti sono onorati)</li>
+<li>Aggiornare questi Termini (effettivi alla pubblicazione)</li>
+</ul>
+
+<h2>🔚 8. Risoluzione</h2>
+<p>Lo Sviluppatore può terminare o sospendere il tuo accesso a FitTool in qualsiasi momento, con o senza causa, con o senza preavviso. Alla risoluzione, devi cessare ogni utilizzo e potresti eliminare l'app.</p>
+
+<h2>⚖️ 9. Legge Applicabile e Giurisdizione</h2>
+<p>Questi Termini sono regolati dalle leggi dell'<strong>Italia</strong>. Eventuali controversie saranno risolte nei tribunali italiani. Se sei un consumatore nell'UE, potresti avere anche diritti secondo le leggi locali di protezione consumatori.</p>
+
+<h2>✂️ 10. Divisibilità</h2>
+<p>Se qualsiasi disposizione di questi Termini viene ritenuta non valida o inapplicabile, le disposizioni rimanenti rimarranno in pieno vigore ed effetto.</p>
+
+<h2>📄 11. Intero Accordo</h2>
+<p>Questi Termini, insieme all'Informativa Privacy, costituiscono l'intero accordo tra te e lo Sviluppatore riguardo FitTool.</p>
+
+<h2>📧 12. Contatti per Questioni Legali</h2>
+<p><strong>Email:</strong> <a href="mailto:fraian_dev@protonmail.com">fraian_dev@protonmail.com</a></p>
+</div>
+
 </div>
 
 <hr class="separator">
 
-<!-- SPANISH -->
-<div class="language-section">
-<h1>Política de Privacidad (Español)</h1>
-<p><em>Última actualización: 7 de Abril de 2026</em></p>
-<p>Su privacidad es muy importante para nosotros. Esta política explica cómo <strong>FitTool</strong> recopila, usa y protege sus datos personales, cumpliendo completamente con las políticas de Google Play Store.</p>
 
-<h2>1. Recopilación y Compartición de Datos</h2>
-<p>FitTool recopila información que usted proporciona (Nombre, Peso, Altura, Edad) para calcular métricas de fitness (IMC, TDEE). 
-<strong>Compartir:</strong> Los usuarios pueden generar informes PDF y enviarlos mediante su cliente de correo electrónico; los datos se transmiten externamente solo en este caso.</p>
-
-<h2>2. Almacenamiento y Seguridad de Datos</h2>
-<ul>
-<li><strong>Almacenamiento Local:</strong> Todos los datos de fitness se almacenan localmente en su dispositivo. Ningún dato personal se sube a nuestros servidores.</li>
-<li><strong>Eliminación de Datos:</strong> Los usuarios pueden eliminar registros en la aplicación o desinstalarla para borrar sus datos.</li>
-</ul>
-
-<h2>3. Publicidad e Identificadores de Dispositivo</h2>
-<p>FitTool utiliza <strong>Google AdMob</strong>. AdMob recopila el ID de publicidad de Android y datos de diagnóstico para personalización de anuncios y análisis de rendimiento, según las <a href="https://policies.google.com/privacy" target="_blank">Políticas de Google</a>.</p>
-
-<h2>4. Menores (13+)</h2>
-<p>La aplicación está destinada a usuarios de 13 años o más. No recopilamos datos de niños menores de 13 años. Para menores de 13 a 17 años, todos los datos permanecen bajo control local del usuario.</p>
-
-<h2>5. Contacto</h2>
-<p>Para consultas, contáctenos a través del correo electrónico listado en la ficha de Google Play.</p>
-
-<div class="tos-section">
-<h1>Términos de Servicio (Español)</h1>
-<p>Al usar FitTool, acepta estos Términos.</p>
-<h2>1. Descargo de Responsabilidad</h2>
-<p>FitTool proporciona cálculos de fitness solo con fines informativos. No sustituye el consejo médico profesional.</p>
-<h2>2. Limitación de Responsabilidad</h2>
-<p>El desarrollador no es responsable por problemas de salud o daños derivados del uso de la app. Consulte siempre a un médico antes de iniciar cualquier programa de fitness.</p>
-</div>
+<!-- ==================== ESPAÑOL ==================== -->
+<div class="language-section" id="espanol">
+    <h1>Política de Privacidad y Términos (Resumen)</h1>
+    <div class="short-version">
+        <h2>Puntos Clave</h2>
+        <ul>
+            <li><strong>100% de Almacenamiento Local:</strong> Todos los datos de salud se almacenan exclusivamente en su dispositivo. NO recopilamos su información personal en servidores externos.</li>
+            <li><strong>Publicidad:</strong> Utilizamos Google AdMob, que puede recopilar identificadores de dispositivos estándar para mostrar anuncios.</li>
+            <li><strong>Descargo de Responsabilidad Médica:</strong> FitTool NO es un dispositivo médico. Todos los cálculos son solo estimaciones. <strong>Siempre consulte a su médico.</strong></li>
+        </ul>
+        <p style="margin-top: 20px;">Este es un resumen de transparencia. Por razones legales, el documento completo y vinculante está disponible únicamente en inglés.</p>
+        <a href="#english" class="english-link" onclick="document.querySelector('a[href=\'#english\']').click()">Ver el documento completo en Inglés</a>
+    </div>
 </div>
 
 <hr class="separator">
 
-<!-- GERMAN -->
-<div class="language-section">
-<h1>Datenschutzerklärung (Deutsch)</h1>
-<p><em>Zuletzt aktualisiert: 7. April 2026</em></p>
-<p>Ihre Privatsphäre ist uns sehr wichtig. Diese Richtlinie erklärt, wie <strong>FitTool</strong> Ihre persönlichen Daten sammelt, verwendet und schützt, vollständig konform mit den Google Play Store-Richtlinien.</p>
-
-<h2>1. Datenerhebung und Weitergabe</h2>
-<p>FitTool sammelt Informationen, die Sie bereitstellen (Name, Gewicht, Größe, Alter) für Fitnessberechnungen (BMI, TDEE). 
-<strong>Weitergabe:</strong> Benutzer können PDF-Berichte erstellen und über ihren E-Mail-Client senden; die Daten werden nur in diesem Fall extern übertragen.</p>
-
-<h2>2. Datenspeicherung und Sicherheit</h2>
-<ul>
-<li><strong>Lokale Speicherung:</strong> Alle Fitnessdaten werden lokal auf Ihrem Gerät gespeichert. Keine persönlichen Daten werden auf unseren Servern hochgeladen.</li>
-<li><strong>Datenlöschung:</strong> Benutzer können Datensätze in der App löschen oder die App deinstallieren, um ihre Daten zu entfernen.</li>
-</ul>
-
-<h2>3. Werbung und Geräte-IDs</h2>
-<p>FitTool verwendet <strong>Google AdMob</strong>. AdMob sammelt die Android-Werbe-ID und Diagnosedaten zur Anzeigenpersonalisierung und Leistungsanalyse gemäß den <a href="https://policies.google.com/privacy" target="_blank">Google-Richtlinien</a>.</p>
-
-<h2>4. Minderjährige (13+)</h2>
-<p>Die App ist für Benutzer ab 13 Jahren vorgesehen. Wir sammeln wissentlich keine Daten von Kindern unter 13 Jahren. Für Minderjährige von 13–17 Jahren verbleiben alle Daten unter lokaler Kontrolle des Benutzers.</p>
-
-<h2>5. Kontakt</h2>
-<p>Bei Fragen kontaktieren Sie uns über die E-Mail-Adresse, die im Google Play Store angegeben ist.</p>
-
-<div class="tos-section">
-<h1>Nutzungsbedingungen (Deutsch)</h1>
-<p>Durch die Nutzung von FitTool stimmen Sie diesen Bedingungen zu.</p>
-<h2>1. Haftungsausschluss</h2>
-<p>FitTool liefert Fitnessberechnungen nur zu Informationszwecken. Es ersetzt keine professionelle medizinische Beratung.</p>
-<h2>2. Haftungsbeschränkung</h2>
-<p>Der Entwickler haftet nicht für gesundheitliche Probleme oder Schäden durch die Nutzung der App. Konsultieren Sie immer einen Arzt, bevor Sie ein neues Fitnessprogramm starten.</p>
-</div>
+<!-- ==================== DEUTSCH ==================== -->
+<div class="language-section" id="deutsch">
+    <h1>Datenschutzerklärung und Bedingungen (Zusammenfassung)</h1>
+    <div class="short-version">
+        <h2>Wichtige Punkte</h2>
+        <ul>
+            <li><strong>100% Lokale Speicherung:</strong> Alle Gesundheitsdaten werden ausschließlich auf Ihrem Gerät gespeichert. Wir sammeln IHRE persönlichen Daten NICHT auf externen Servern.</li>
+            <li><strong>Werbung:</strong> Wir verwenden Google AdMob, das standardmäßige Gerätekennungen sammeln kann, um Anzeigen bereitzustellen.</li>
+            <li><strong>Medizinischer Haftungsausschluss:</strong> FitTool ist KEIN medizinisches Gerät. Alle Berechnungen sind nur Schätzungen. <strong>Konsultieren Sie immer Ihren Arzt.</strong></li>
+        </ul>
+        <p style="margin-top: 20px;">Dies ist eine Transparenzzusammenfassung. Aus rechtlichen Gründen ist das vollständige, bindende Dokument nur in englischer Sprache verfügbar.</p>
+        <a href="#english" class="english-link" onclick="document.querySelector('a[href=\'#english\']').click()">Vollständiges Dokument auf Englisch anzeigen</a>
+    </div>
 </div>
 
 <hr class="separator">
 
-<!-- FRENCH -->
-<div class="language-section">
-<h1>Politique de Confidentialité (Français)</h1>
-<p><em>Dernière mise à jour : 7 avril 2026</em></p>
-<p>Votre vie privée nous tient à cœur. Cette politique explique comment <strong>FitTool</strong> collecte, utilise et protège vos données personnelles, en conformité totale avec les règles du Google Play Store.</p>
-
-<h2>1. Collecte et Partage des Données</h2>
-<p>FitTool collecte les informations que vous fournissez (Nom, Poids, Taille, Âge) pour calculer des indicateurs fitness (IMC, TDEE). 
-<strong>Partage :</strong> Les utilisateurs peuvent générer des rapports PDF et les envoyer via leur client e-mail ; les données ne sont transmises à l'extérieur que dans ce cas.</p>
-
-<h2>2. Stockage et Sécurité des Données</h2>
-<ul>
-<li><strong>Stockage Local :</strong> Toutes les données fitness sont stockées localement sur votre appareil. Aucune donnée personnelle n’est envoyée à nos serveurs.</li>
-<li><strong>Suppression des Données :</strong> Les utilisateurs peuvent supprimer les enregistrements dans l’application ou désinstaller l’app pour effacer leurs données.</li>
-</ul>
-
-<h2>3. Publicité et Identifiants d’Appareil</h2>
-<p>FitTool utilise <strong>Google AdMob</strong>. AdMob collecte l’identifiant publicitaire Android et des données de diagnostic pour la personnalisation des publicités et l’analyse des performances, selon les <a href="https://policies.google.com/privacy" target="_blank">Politiques Google</a>.</p>
-
-<h2>4. Mineurs (13+)</h2>
-<p>L’application s’adresse aux utilisateurs de 13 ans et plus. Nous ne collectons pas sciemment de données d’enfants de moins de 13 ans. Pour les mineurs de 13 à 17 ans, toutes les données restent sous contrôle local de l’utilisateur.</p>
-
-<h2>5. Contact</h2>
-<p>Pour toute question, contactez-nous via l’adresse e-mail fournie sur la fiche Google Play.</p>
-
-<div class="tos-section">
-<h1>Conditions d’Utilisation (Français)</h1>
-<p>En utilisant FitTool, vous acceptez ces conditions.</p>
-<h2>1. Clause de Non-Responsabilité</h2>
-<p>FitTool fournit des calculs de fitness uniquement à titre informatif. Cela ne remplace pas un avis médical professionnel.</p>
-<h2>2. Limitation de Responsabilité</h2>
-<p>Le développeur n’est pas responsable des problèmes de santé ou dommages résultant de l’utilisation de l’application. Consultez toujours un médecin avant de commencer tout programme fitness.</p>
-</div>
+<!-- ==================== FRANÇAIS ==================== -->
+<div class="language-section" id="francais">
+    <h1>Politique de Confidentialité et Conditions (Résumé)</h1>
+    <div class="short-version">
+        <h2>Points Clés</h2>
+        <ul>
+            <li><strong>Stockage 100% Local:</strong> Toutes les données de santé sont stockées exclusivement sur votre appareil. Nous NE collectons PAS vos informations personnelles sur des serveurs externes.</li>
+            <li><strong>Publicité:</strong> Nous utilisons Google AdMob, qui peut collecter des identifiants d'appareils standard pour diffuser des annonces.</li>
+            <li><strong>Avis Médical:</strong> FitTool N'EST PAS un appareil médical. Tous les calculs ne sont que des estimations. <strong>Consultez toujours votre médecin.</strong></li>
+        </ul>
+        <p style="margin-top: 20px;">Il s'agit d'un résumé de transparence. Pour des raisons légales, le document complet et contraignant n'est disponible qu'en anglais.</p>
+        <a href="#english" class="english-link" onclick="document.querySelector('a[href=\'#english\']').click()">Voir le document complet en Anglais</a>
+    </div>
 </div>
 
 <hr class="separator">
 
-<!-- JAPANESE -->
-<div class="language-section">
-<h1>プライバシーポリシー (日本語)</h1>
-<p><em>最終更新日：2026年4月7日</em></p>
-<p>お客様のプライバシーは非常に重要です。本ポリシーでは、<strong>FitTool</strong>がどのように個人データを収集、使用、保護するかを、Google Play ストアの規定に完全準拠して説明します。</p>
-
-<h2>1. データ収集と共有</h2>
-<p>FitToolは、ユーザーが提供する情報（名前、体重、身長、年齢）を使用して、フィットネスメトリクス（BMI、TDEE）を計算します。
-<strong>共有：</strong>ユーザーはPDFレポートを生成し、選択したメールクライアント経由で送信できます。この場合のみ、データは外部に送信されます。</p>
-
-<h2>2. データ保存とセキュリティ</h2>
-<ul>
-<li><strong>ローカル保存：</strong>すべてのフィットネスデータはデバイス内に保存されます。個人データはサーバーにアップロードされません。</li>
-<li><strong>データ削除：</strong>ユーザーはアプリ内で記録を削除するか、アプリをアンインストールしてデータを削除できます。</li>
-</ul>
-
-<h2>3. 広告とデバイス識別子</h2>
-<p>FitToolは <strong>Google AdMob</strong> を使用しています。AdMobはAndroid広告IDおよび診断データを収集し、広告のパーソナライズとパフォーマンス分析に使用します。詳細は <a href="https://policies.google.com/privacy" target="_blank">Googleポリシー</a> をご覧ください。</p>
-
-<h2>4. 未成年者（13歳以上）</h2>
-<p>本アプリは13歳以上のユーザーを対象としています。13歳未満の子供から意図的に個人データを収集することはありません。13〜17歳の未成年者の場合、すべてのデータはユーザーのローカル管理下にあります。</p>
-
-<h2>5. お問い合わせ</h2>
-<p>ご質問がある場合は、Google Play ストアの掲載情報に記載されているメールアドレスまでお問い合わせください。</p>
-
-<div class="tos-section">
-<h1>利用規約 (日本語)</h1>
-<p>FitToolを使用することで、これらの条件に同意したことになります。</p>
-<h2>1. 免責事項</h2>
-<p>FitToolは情報提供のみを目的としてフィットネス計算を提供します。専門的な医学的アドバイスの代わりにはなりません。</p>
-<h2>2. 責任の制限</h2>
-<p>開発者は、本アプリ使用に起因する健康上の問題や損害について一切責任を負いません。新しいフィットネスプログラムを開始する前に、必ず医師に相談してください。</p>
-</div>
+<!-- ==================== JAPANESE ==================== -->
+<div class="language-section" id="japanese">
+    <h1>プライバシーポリシーと利用規約（概要）</h1>
+    <div class="short-version">
+        <h2>主なポイント</h2>
+        <ul>
+            <li><strong>100％ローカルストレージ:</strong> すべての健康データはお使いのデバイスにのみ保存されます。外部サーバーにお客様の個人情報を収集することはありません。</li>
+            <li><strong>広告:</strong> 広告を表示するために標準的なデバイス識別子を収集する可能性のあるGoogle AdMobを使用しています。</li>
+            <li><strong>医療免責事項:</strong> FitToolは医療機器ではありません。すべての計算は推定値にすぎません。<strong>必ず医師にご相談ください。</strong></li>
+        </ul>
+        <p style="margin-top: 20px;">これは透明性のための概要です。法的な理由により、法的拘束力のある完全な文書は英語でのみ提供されています。</p>
+        <a href="#english" class="english-link" onclick="document.querySelector('a[href=\'#english\']').click()">英語での完全な文書を見る</a>
+    </div>
 </div>
 
 <hr class="separator">
 
-<!-- CHINESE -->
-<div class="language-section">
-<h1>隐私政策 (简体中文)</h1>
-<p><em>最后更新：2026年4月7日</em></p>
-<p>我们非常重视您的隐私。本政策说明 <strong>FitTool</strong> 如何收集、使用和保护您的个人数据，完全符合 Google Play 商店政策。</p>
-
-<h2>1. 数据收集与共享</h2>
-<p>FitTool 收集您提供的信息（姓名、体重、身高、年龄）以计算健身指标（BMI、TDEE）。
-<strong>共享：</strong>用户可以生成 PDF 报告并通过其选择的邮箱客户端发送；仅在此情况下数据才会外传。</p>
-
-<h2>2. 数据存储与安全</h2>
-<ul>
-<li><strong>本地存储：</strong>所有健身数据均存储在设备本地。没有个人数据会上传到我们的服务器。</li>
-<li><strong>数据删除：</strong>用户可以在应用内删除记录，或卸载应用以清除数据。</li>
-</ul>
-
-<h2>3. 广告与设备标识符</h2>
-<p>FitTool 使用 <strong>Google AdMob</strong>。AdMob 收集 Android 广告 ID 和诊断数据，用于广告个性化和性能分析，详见 <a href="https://policies.google.com/privacy" target="_blank">Google 政策</a>。</p>
-
-<h2>4. 未成年人 (13+)</h2>
-<p>本应用面向 13 岁及以上用户。我们不会刻意收集 13 岁以下儿童的数据。13–17 岁未成年人的所有数据均由用户本地控制。</p>
-
-<h2>5. 联系方式</h2>
-<p>如有疑问，请通过 Google Play 商店页面上提供的邮箱联系我们。</p>
-
-<div class="tos-section">
-<h1>服务条款 (简体中文)</h1>
-<p>使用 FitTool 即表示您同意这些条款。</p>
-<h2>1. 免责声明</h2>
-<p>FitTool 提供的健身计算仅供参考，不替代专业医疗建议。</p>
-<h2>2. 责任限制</h2>
-<p>开发者不对使用本应用造成的健康问题或损失承担任何责任。在开始任何新的健身计划前，请务必咨询医生。</p>
-</div>
+<!-- ==================== CHINESE ==================== -->
+<div class="language-section" id="chinese">
+    <h1>隐私政策和服务条款（摘要）</h1>
+    <div class="short-version">
+        <h2>关键点</h2>
+        <ul>
+            <li><strong>100% 本地存储:</strong> 所有健康数据仅存储在您的设备上。我们绝不会在外部服务器上收集您的个人信息。</li>
+            <li><strong>广告:</strong> 我们使用 Google AdMob，它可能会收集标准的设备标识符以提供广告。</li>
+            <li><strong>医疗免责声明:</strong> FitTool 不是医疗设备。所有计算仅为估算值。<strong>请务必咨询您的医生。</strong></li>
+        </ul>
+        <p style="margin-top: 20px;">这是一份透明性摘要。出于法律原因，完整且具有约束力的文件仅提供英文版本。</p>
+        <a href="#english" class="english-link" onclick="document.querySelector('a[href=\'#english\']').click()">查看英文完整文件</a>
+    </div>
 </div>
 
-<div class="footer">
-<p>© 2026 FitTool. All rights reserved. | Privacy Policy & Terms of Service compliant with Google Play.</p>
-</div>
+</div> 
+</div> 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.language-nav a');
+    const sections = document.querySelectorAll('.language-section');
+
+    function showLanguage(langId) {
+        sections.forEach(s => s.classList.remove('active'));
+        navLinks.forEach(l => l.classList.remove('active'));
+
+        const targetSection = document.getElementById(langId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+            const activeLink = document.querySelector(`.language-nav a[href="#${langId}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const langId = this.getAttribute('href').substring(1);
+            showLanguage(langId);
+        });
+    });
+
+    function detectLanguage() {
+        if (window.location.hash) {
+            const hashLang = window.location.hash.substring(1);
+            if (document.getElementById(hashLang)) return hashLang;
+        }
+        
+        const browserLang = navigator.language || navigator.userLanguage;
+        const langCode = browserLang.toLowerCase().substring(0, 2);
+        
+        switch(langCode) {
+            case 'it': return 'italiano';
+            case 'es': return 'espanol';
+            case 'de': return 'deutsch';
+            case 'fr': return 'francais';
+            case 'ja': return 'japanese';
+            case 'zh': return 'chinese';
+            default: return 'english';
+        }
+    }
+
+    showLanguage(detectLanguage());
+});
+</script>
 </body>
 </html>
